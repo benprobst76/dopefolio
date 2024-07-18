@@ -295,7 +295,10 @@ textarea {
   .projects__row-img {
     width: 100%;
     display: block;
-    object-fit: cover; }
+    object-fit: cover; 
+    border: 5px solid black;
+    border-radius: 10px; /* Rounded corners */
+    height: auto; /* Maintain aspect ratio */}
   .projects__row-content {
     padding: 2rem 0;
     display: flex;
@@ -321,6 +324,12 @@ textarea {
       @media only screen and (max-width: 37.5em) {
         .projects__row-content-desc {
           font-size: 1.7rem; } }
+    .project__content-skills {
+      padding: 2rem;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
 
 .contact {
   background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
