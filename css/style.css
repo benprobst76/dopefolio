@@ -711,3 +711,6 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+#prefab-cs-hero {
+  background: linear-gradient(to right, rgba(165, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url(../../assets/svg/common-bg.svg);
+}
