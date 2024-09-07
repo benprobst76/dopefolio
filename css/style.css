@@ -4,7 +4,7 @@
 900 - 1200px:   Tablet landscape
 [1200 - 1800] is where our normal styles apply
 1800px + :      Big desktop
-$breakpoint arguement choices:
+$breakpoint argument choices:
 - phone
 - tab-port
 - tab-land
@@ -72,6 +72,14 @@ textarea {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; 
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+.heading-primary-project {
+  font-size: 6rem;
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: 'Bungee', sans-serif;; 
   position: relative;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
 }
@@ -207,7 +215,7 @@ textarea {
   color: #fff;
   background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(2, 49, 90, 0.8)), url(../../assets/svg/common-bg.svg);
   background-position: center;
-  height: 100vh;
+  height: 50vh;
   min-height: 80rem;
   max-height: 120rem;
   position: relative; }
