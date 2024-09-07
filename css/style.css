@@ -327,6 +327,13 @@ textarea {
     border: 5px solid black;
     border-radius: 10px; /* Rounded corners */
     height: auto; /* Maintain aspect ratio */}
+  .projects__row-img-phone {
+    width: 50%;
+    display: block;
+    object-fit: cover; 
+    border: 5px solid black;
+    border-radius: 10px; /* Rounded corners */
+    height: auto; /* Maintain aspect ratio */}
   .projects__row-content {
     padding: 2rem 0;
     display: flex;
