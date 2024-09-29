@@ -237,6 +237,7 @@
                 href="https://pcpartpicker.com/b/XBkXsY"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
+                rel="noopener"
                 >Details</a
               >
             </div>
@@ -261,6 +262,7 @@
                 href="https://qset.ca/rover/"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
+                rel="noopener"
                 >Details</a
               >
               <div class="project__content-skills">
@@ -292,6 +294,7 @@
                 href="https://github.com/SoslyLW/essdev-app-team"
                 class="btn btn--med btn--theme dynamicBgClr"
                 target="_blank"
+                rel="noopener"
                 >Code Link</a
               >
               <div class="project__content-skills">
@@ -316,71 +319,71 @@
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
+          <form name="contact" method="POST" data-netlify="true" class="contact__form" netlify>
+              <input type="hidden" name="form-name" value="contact" />
+              <div class="contact__form-field">
+                  <label class="contact__form-label" for="name">Name</label>
+                  <input
+                      required
+                      placeholder="Enter Your Name"
+                      type="text"
+                      class="contact__form-input"
+                      name="name"
+                      id="name"
+                  />
+              </div>
+              <div class="contact__form-field">
+                  <label class="contact__form-label" for="email">Email</label>
+                  <input
+                      required
+                      placeholder="Enter Your Email"
+                      type="email"
+                      class="contact__form-input"
+                      name="email"
+                      id="email"
+                  />
+              </div>
+              <div class="contact__form-field">
+                  <label class="contact__form-label" for="message">Message</label>
+                  <textarea
+                      required
+                      cols="30"
+                      rows="10"
+                      class="contact__form-input"
+                      placeholder="Enter Your Message"
+                      name="message"
+                      id="message"
+                  ></textarea>
+              </div>
+              <button type="submit" class="btn btn--theme contact__btn">
+                  Submit
+              </button>
           </form>
-        </div>
       </div>
-    </section>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ben-probst">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/benprobst76">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a href="mailto:ben.probst@queensu.ca" target="_blank" rel="noreferrer">
+      </section>
+      <footer class="main-footer">
+        <div class="main-container">
+          <div class="main-footer__upper">
+            <div class="main-footer__row main-footer__row-1">
+              <h2 class="heading heading-sm main-footer__heading-sm">
+                <span>Social</span>
+              </h2>
+              <div class="main-footer__social-cont">
+                <a target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com/in/ben-probst" title="LinkedIn Profile">
+                  <img
+                    class="main-footer__icon"
+                    src="./assets/png/linkedin-ico.png"
+                    alt="icon"
+                  />
+                </a>
+                <a target="_blank" rel="noreferrer noopener" href="https://github.com/benprobst76"  title="GitHub Profile">
+                  <img
+                    class="main-footer__icon"
+                    src="./assets/png/github-ico.png"
+                    alt="icon"
+                  />
+                </a>
+                <a href="mailto:ben.probst@queensu.ca" target="_blank" rel="noreferrer"  title="Email">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/email-ico.png"
