@@ -127,12 +127,10 @@
 
 .projects {
   &__row {
-    width: 100%;
-    display: block;
-    object-fit: cover; 
-    border: 5px solid black;
-    border-radius: 10px; /* Rounded corners */
-    height: auto; /* Maintain aspect ratio */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 5rem;
+    margin-bottom: 11rem; }
 
     @include respond(tab-port) {
       grid-template-columns: 1fr;
@@ -162,8 +160,11 @@
     &-img {
       width: 100%;
       display: block;
-      object-fit: cover;
-    }
+      object-fit: cover; 
+      border: 5px solid black;
+      border-radius: 10px; /* Rounded corners */
+      height: auto; /* Maintain aspect ratio */
+      
     &-content {
       padding: 2rem 0;
       display: flex;
