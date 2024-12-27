@@ -4,7 +4,7 @@
 900 - 1200px:   Tablet landscape
 [1200 - 1800] is where our normal styles apply
 1800px + :      Big desktop
-$breakpoint argument choices:
+$breakpoint arguement choices:
 - phone
 - tab-port
 - tab-land
@@ -68,36 +68,31 @@ textarea {
   letter-spacing: 3px;
   text-align: center;
   font-family: 'Bungee', sans-serif;
-  background: url('../assets/jpeg/rocky_texture.jpg');
+  background: url("../assets/jpeg/rocky_texture.jpg");
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent; 
+  color: transparent;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add a shadow for depth */ }
+
 .heading-primary-project {
   font-size: 6rem;
   letter-spacing: 3px;
   text-align: center;
-  font-family: 'Bungee', sans-serif;; 
+  font-family: 'Bungee', sans-serif;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
-}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add a shadow for depth */ }
+
 .heading-primary .letter {
-  background: url('../assets/jpeg/rocky_texture.jpg');
+  background: url("../assets/jpeg/rocky_texture.jpg");
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
-  transition: transform 0.3s ease; /* Smooth transition */
-}
-  @media only screen and (max-width: 37.5em) {
-    .heading-primary {
-      font-size: 4.5rem;
-    }
-  }
-  
-  
+  transition: transform 0.3s ease;
+  /* Smooth transition */ }
 
 .heading-sec__mb-bg {
   margin-bottom: 11rem; }
@@ -211,11 +206,47 @@ textarea {
 .d-none {
   display: none; }
 
+#prefab-cs-hero {
+  background: linear-gradient(to right, rgba(165, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url(../../assets/svg/common-bg.svg); }
+
+/* Style for the letters */
+.letter {
+  display: inline-block;
+  cursor: pointer;
+  position: relative; }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
+
+.shake {
+  animation: shake 0.5s linear infinite; }
+
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(2, 49, 90, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../assets/svg/common-bg.svg);
   background-position: center;
-  height: 50vh;
+  height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
   position: relative; }
@@ -304,10 +335,14 @@ textarea {
         margin-bottom: 4rem; }
 
 .projects__row {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-gap: 5rem;
-  margin-bottom: 11rem; }
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border: 5px solid black;
+  border-radius: 10px;
+  /* Rounded corners */
+  height: auto;
+  /* Maintain aspect ratio */ }
   @media only screen and (max-width: 56.25em) {
     .projects__row {
       grid-template-columns: 1fr;
@@ -318,22 +353,21 @@ textarea {
       text-align: center; } }
   .projects__row:last-child {
     margin-bottom: 0; }
+  .projects__row-img-phone {
+    width: 50%;
+    display: block;
+    object-fit: cover;
+    border: 5px solid black;
+    border-radius: 10px;
+    /* Rounded corners */
+    height: auto;
+    /* Maintain aspect ratio */ }
   .projects__row-img-cont {
     overflow: hidden; }
   .projects__row-img {
     width: 100%;
     display: block;
-    object-fit: cover; 
-    border: 5px solid black;
-    border-radius: 10px; /* Rounded corners */
-    height: auto; /* Maintain aspect ratio */}
-  .projects__row-img-phone {
-    width: 50%;
-    display: block;
-    object-fit: cover; 
-    border: 5px solid black;
-    border-radius: 10px; /* Rounded corners */
-    height: auto; /* Maintain aspect ratio */}
+    object-fit: cover; }
   .projects__row-content {
     padding: 2rem 0;
     display: flex;
@@ -359,15 +393,15 @@ textarea {
       @media only screen and (max-width: 37.5em) {
         .projects__row-content-desc {
           font-size: 1.7rem; } }
-    .project__content-skills {
-      padding: 2rem;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-    }
+
+.projects__content-skills {
+  padding: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center; }
 
 .contact {
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -448,7 +482,7 @@ textarea {
 
 .project-cs-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -716,6 +750,9 @@ textarea {
     font-weight: 600;
     color: #777; }
 
+.fas, .fab {
+  margin-right: 0.5rem; }
+
 .mouse {
   width: 25px;
   height: 40px;
@@ -746,30 +783,3 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
-#prefab-cs-hero {
-  background: linear-gradient(to right, rgba(165, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url(../../assets/svg/common-bg.svg);
-}
-/* Style for the letters */
-.letter {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-.shake {
-  animation: shake 0.5s linear infinite;
-}
