@@ -1,9 +1,37 @@
+@use "mixins";
+@use "variables";
+
 .heading-primary {
-  font-size: 6rem;
+  font-size: 10rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
-  @include respond(phone) {
+  font-family: 'Bungee', sans-serif;
+  background: url('../assets/jpeg/rocky_texture.jpg');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+.heading-primary-project {
+  font-size: 6rem;
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: 'Bungee', sans-serif;; 
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+.heading-primary .letter {
+  background: url('../assets/jpeg/rocky_texture.jpg');
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
     font-size: 4.5rem;
   }
 }
@@ -11,14 +39,14 @@
 .heading-sec {
   &__mb-bg {
     margin-bottom: 11rem;
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
       margin-bottom: 8rem;
     }
   }
 
   &__mb-med {
     margin-bottom: 9rem;
-    @include respond(tab-port) {
+    @include mixins.respond(tab-port) {
       margin-bottom: 8rem;
     }
   }
@@ -45,12 +73,12 @@
       top: calc(100% + 1.5rem);
       height: 5px;
       width: 3rem;
-      background: $themeClrPrimary;
+      background: variables.$themeClrPrimary;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: $commonBorderRadius;
+      border-radius: variables.$commonBorderRadius;
 
-      @include respond(phone) {
+      @include mixins.respond(phone) {
         top: calc(100% + 1.2rem);
       }
     }
@@ -66,7 +94,7 @@
     margin: auto;
     line-height: 1.6;
 
-    @include respond(phone) {
+    @include mixins.respond(phone) {
       font-size: 1.8rem;
     }
 
@@ -95,7 +123,7 @@
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
-  border-radius: $commonBorderRadius;
+  border-radius: variables.$commonBorderRadius;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform .3s;
 
@@ -113,13 +141,13 @@
   }
 
   &--theme {
-    background: $themeClrPrimary;
+    background: variables.$themeClrPrimary;
     color: #fff;
   }
   &--theme-inv {
-    color: $themeClrPrimary;
+    color: variables.$themeClrPrimary;
     background: #fff;
-    border: 2px solid $themeClrPrimary;
+    border: 2px solid variables.$themeClrPrimary;
     box-shadow: none;
     padding: calc(1.5rem - 2px) calc(5rem - 2px);
   }
@@ -127,7 +155,7 @@
 
 .sec-pad {
   padding: 12rem 0;
-  @include respond(tab-port) {
+  @include mixins.respond(tab-port) {
     padding: 8rem 0;
   }
 }
@@ -139,7 +167,7 @@
   width: 100%;
   line-height: 1.6;
 
-  @include respond(phone) {
+  @include mixins.respond(phone) {
     font-size: 2rem;
   }
 }
@@ -147,4 +175,32 @@
 
 .d-none {
   display: none;
+}
+
+#prefab-cs-hero {
+  background: linear-gradient(to right, rgba(165, 0, 0, 0.8), rgba(75, 0, 0, 0.8)), url(../../assets/svg/common-bg.svg);
+}
+/* Style for the letters */
+.letter {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+  animation: shake 0.5s linear infinite;
 }
